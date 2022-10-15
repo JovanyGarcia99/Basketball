@@ -3,12 +3,158 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-<data>
+    <data>
 
-</data>
+    </data>
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"></LinearLayout>
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/visitante"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40dp"
+            android:text="Visitante"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/menosVisitante"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="132dp"
+            android:layout_marginBottom="108dp"
+            android:text="-1"
+            app:layout_constraintBottom_toTopOf="@+id/visitante"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/reset" />
+
+        <Button
+            android:id="@+id/masDosVisitante"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="68dp"
+            android:text="+2"
+            app:layout_constraintBottom_toTopOf="@+id/visitante"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/masUnoVisitante"
+            app:layout_constraintVertical_bias="0.492" />
+
+        <TextView
+            android:id="@+id/puntosVisitante"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="116dp"
+            android:text="0"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toTopOf="@+id/visitante"
+            app:layout_constraintEnd_toStartOf="@+id/masDosVisitante"
+            app:layout_constraintStart_toEndOf="@+id/menosVisitante" />
+
+        <Button
+            android:id="@+id/masUnoVisitante"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="104dp"
+            android:layout_marginEnd="20dp"
+            android:text="+1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/score" />
+
+        <TextView
+            android:id="@+id/local4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Local"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/menosLocal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="108dp"
+            android:text="-1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/local4" />
+
+        <Button
+            android:id="@+id/masUnoLocal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="68dp"
+            android:layout_marginEnd="20dp"
+            android:text="+1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/local4" />
+
+        <Button
+            android:id="@+id/masDosLocal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:text="+2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/masUnoLocal" />
+
+        <TextView
+            android:id="@+id/puntosLocal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="116dp"
+            android:textAlignment="center"
+            android:text="0"
+            app:layout_constraintEnd_toStartOf="@+id/masUnoLocal"
+            app:layout_constraintHorizontal_bias="0.531"
+            app:layout_constraintStart_toEndOf="@+id/menosLocal"
+            app:layout_constraintTop_toBottomOf="@+id/local4" />
+
+        <Button
+            android:id="@+id/reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="132dp"
+            android:text="Reset"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/menosLocal" />
+
+        <Button
+            android:id="@+id/score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="104dp"
+            android:layout_marginEnd="20dp"
+            android:text="Score"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/masDosLocal" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="153dp"
+            android:layout_height="139dp"
+            android:layout_marginTop="100dp"
+            app:layout_constraintEnd_toStartOf="@+id/score"
+            app:layout_constraintStart_toEndOf="@+id/reset"
+            app:layout_constraintTop_toBottomOf="@+id/puntosLocal"
+            app:srcCompat="@drawable/pelota_basket" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 </layout>
